@@ -4,7 +4,9 @@ import './index.css';
 class Sidebar extends Component {
     render() {
         return (
-            <div></div>
+            <div>
+                <div className="sidebar_logo"><img src="../../images/lubeer_logo.svg"></img></div>
+            </div>
         );
     }
 }
