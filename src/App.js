@@ -4,6 +4,7 @@ import AppBar from './components/appbar';
 import Sidebar from './components/sidebar';
 import Footer from './components/footer';
 import Dashboard from "./components/dashboard";
+import SearchBox from './components/appbar/SearchBox'
 
 import './App.css';
 
