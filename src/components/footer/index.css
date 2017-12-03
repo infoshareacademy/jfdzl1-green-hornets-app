@@ -3,6 +3,9 @@
     float: left;
     margin: 0 0.5em;
 }
+.App-footer-socialIcon .fa{
+    color: #ffffff;
+}
 
 .App-footer-containerIcons {
     float: left;
@@ -11,7 +14,6 @@
     font-size: 2em;
     display: flex;
     justify-content: center;
-
 }
 
 .App-footer-socialIcons:hover {
@@ -22,10 +24,12 @@
     float: left;
     width: 50%;
     font-size: 2em;
+    color: #ffffff;
 }
-
 .App-footer {
     width: 100%;
     text-align: right;
+    height: 6.3em;
+    background-color: #0c6728;
 
 }
