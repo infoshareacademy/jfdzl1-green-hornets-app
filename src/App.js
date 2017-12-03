@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import Dashboard from "./components/dashboard";
 import SearchBox from './components/appbar/SearchBox'
 
+
 import './App.css';
 
 class App extends Component {
