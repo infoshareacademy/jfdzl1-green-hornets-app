@@ -18,15 +18,11 @@ class App extends Component {
     return (
       <Router>
         <div className={classes.root}>
-          <Grid container>
-            <Grid item xs={12}>
-              <Grid container className={classes.items}>
-                <AppBar/>
-                <Sidebar/>
-                <Route exact path="/" component={Dashboard}/>
-                <Footer/>
-              </Grid>
-            </Grid>
+          <Grid container className={classes.items}>
+            <AppBar/>
+            <Sidebar/>
+            <Route exact path="/" component={Dashboard}/>
+            <Footer/>
           </Grid>
         </div>
       </Router>
