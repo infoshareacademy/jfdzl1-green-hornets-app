@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
+import BeersList from './components/BeerList'
 
 import theme from './theme';
 import AppBar from './components/appbar';
@@ -22,6 +23,7 @@ class App extends Component {
             <AppBar/>
             <Sidebar/>
             <Route exact path="/" component={Dashboard}/>
+            <Route path='/listOfBeers' component={BeersList}/>
             <Footer/>
           </Grid>
         </div>
