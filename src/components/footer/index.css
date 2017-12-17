@@ -1,0 +1,33 @@
+.App-footer p {
+    color: #ffffff;
+    position: absolute;
+    top: 23.5%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+
+.App-footer {
+    width: 100%;
+    text-align: center;
+    height: 3.3em;
+    background-color: #0c6728;
+}
+
+.fa1 {
+    font-size: 2em;
+    color: #ffffff;
+    position: absolute;
+    top: 25%;
+    left: 62%;
+    transform: translate(-50%,-50%);
+}
+
+.fa2 {
+    font-size: 2em;
+    color: #ffffff;
+    position: absolute;
+    top: 25%;
+    left: 62%;
+    margin-left: 45px;
+    transform: translate(-50%,-50%);
+}
