@@ -26,7 +26,7 @@ const mapDispatchToProps = dispatch => ({
 class Sidebar extends Component {
   render() {
     return (
-      <Drawer open={this.props.open} onClose={this.props.toggleSidebar}>
+      <Drawer open={this.props.open}>
         <div
           tabIndex={0}
           role="button"
