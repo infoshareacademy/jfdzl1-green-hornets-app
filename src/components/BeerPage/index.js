@@ -1,20 +1,12 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import Grid from 'material-ui/Grid';
 import {database} from "../../firebase";
 
-import FaAngellist from 'react-icons/lib/fa/angellist';
-import FaDaschbord from 'react-icons/lib/fa/dashboard';
-import FaListOfBrewers from 'react-icons/lib/fa/fort-awesome';
-import FaListOfBeers from 'react-icons/lib/fa/beer';
-import FaListOfCities from 'react-icons/lib/fa/bank';
-import FaAddBeer from 'react-icons/lib/fa/plus';
-import FaSearch from 'react-icons/lib/fa/search';
 import './index.css';
 
-class BeerList extends Component {
+class BeerPage extends Component {
     state = {
-        beerList: null
+        beerPage: null
     }
 
     componentDidMount() {
@@ -23,7 +15,7 @@ class BeerList extends Component {
                 'value',
                 (snapshot) => {
                     this.setState({
-                        beerList: snapshot.val()
+                        beerPage: snapshot.val()
                     })
                 }
             )
@@ -32,15 +24,15 @@ class BeerList extends Component {
     render() {
         return (
             <Grid item xs={12}>
-                <h1>LISTA PIW</h1>
+                <h1>STRONA PIWA</h1>
                 <div>
                     {
-                        this.state.beerList &&
-                        Object.entries(this.state.beerList)
+                        this.state.beerPage &&
+                        Object.entries(this.state.beerPage)
                             .map(
                                 ([key, value]) => (
                                     <div key={key}>
-                                        <p><a href="/BeerPage">Nazwa piwa: {value.name}</a></p>
+                                        <p>Nazwa piwa: {value.name}</p>
                                         <p>Produkcja: {value.brewery}</p>
                                     </div>
                                 )
@@ -52,4 +44,4 @@ class BeerList extends Component {
     }
 }
 
-export default BeerList
+export default BeerPage

@@ -12,6 +12,7 @@ import AppBar from './components/appbar';
 import Sidebar from './components/sidebar';
 import Footer from './components/footer';
 import Dashboard from "./components/dashboard";
+import BeerPage from "./components/BeerPage";
 import Notifications from './UI/Notifications';
 import { store, history } from './store';
 
@@ -30,6 +31,7 @@ class App extends Component {
                 <Sidebar/>
                 <Route exact path="/" component={Dashboard}/>
                 <Route path='/listOfBeers' component={BeersList}/>
+                <Route path='/BeerPage' component={BeerPage}/>
                 <Footer/>
               </Grid>
             </div>
