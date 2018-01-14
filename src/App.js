@@ -31,8 +31,8 @@ class App extends Component {
               <Route path='/listOfBeers' component={BeersList}/>
               <Footer/>
             </Grid>
-            <Notifications/>
           </div>
+          <Notifications/>
         </ConnectedRouter>
       </Provider>
     );
