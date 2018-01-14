@@ -3,13 +3,14 @@ import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import { connect } from 'react-redux';
 
-import { showNotification } from '../../UI/logic';
+import { showNotification, toggleSidebar } from '../../UI/logic';
 
 import './index.css';
 
 const mapDispatchToProps = dispatch => {
   return {
-    showSnackbar: (message) => dispatch(showNotification('Hello iSA :)'))
+    showSnackbar: (message) => dispatch(showNotification('Hello iSA :)')),
+    toggleSidebar: () => dispatch(toggleSidebar())
   }
 }
 
@@ -20,7 +21,8 @@ class Dashboard extends Component {
         <Paper>
           <h1>Dashboard</h1>
           <div>
-            <button onClick={this.props.showSnackbar}>CLICK ME!</button>
+            <button onClick={this.props.showSnackbar}>CLICK ME For notification!</button>
+            <button onClick={this.props.toggleSidebar}>Toggle sidebar</button>
           </div>
         </Paper>
       </Grid>

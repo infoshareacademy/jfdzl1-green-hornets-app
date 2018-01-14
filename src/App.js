@@ -27,12 +27,12 @@ class App extends Component {
             <div className={classes.root}>
               <Grid container className={classes.items}>
                 <AppBar/>
-                <Sidebar/>
                 <Route exact path="/" component={Dashboard}/>
                 <Route path='/listOfBeers' component={BeersList}/>
                 <Footer/>
               </Grid>
             </div>
+            <Sidebar/>
             <Notifications/>
           </div>
         </ConnectedRouter>
