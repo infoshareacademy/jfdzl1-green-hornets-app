@@ -12,6 +12,7 @@ import AppBar from './components/appbar';
 import Sidebar from './components/sidebar';
 import Footer from './components/footer';
 import Dashboard from "./components/dashboard";
+import Notifications from './UI/Notifications';
 import { store, history } from './store';
 
 import './App.css';
@@ -22,14 +23,17 @@ class App extends Component {
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <div className={classes.root}>
-            <Grid container className={classes.items}>
-              <AppBar/>
-              <Sidebar/>
-              <Route exact path="/" component={Dashboard}/>
-              <Route path='/listOfBeers' component={BeersList}/>
-              <Footer/>
-            </Grid>
+          <div>
+            <div className={classes.root}>
+              <Grid container className={classes.items}>
+                <AppBar/>
+                <Sidebar/>
+                <Route exact path="/" component={Dashboard}/>
+                <Route path='/listOfBeers' component={BeersList}/>
+                <Footer/>
+              </Grid>
+            </div>
+            <Notifications/>
           </div>
         </ConnectedRouter>
       </Provider>
