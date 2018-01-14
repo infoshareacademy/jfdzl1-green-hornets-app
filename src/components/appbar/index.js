@@ -10,42 +10,52 @@ import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import primaryGreen from '../palete'
+import {showNotification, toggleSidebar} from '../../UI/logic';
+import {connect} from 'react-redux';
+
 
 const styles = {
     root: {
-        width: '100%',
+        width: '100%'
     },
     flex: {
-        flex: 1,
+        flex: 1
     },
     menuButton: {
         marginLeft: -12,
-        marginRight: 20,
-    },
-
+        marginRight: 20
+    }
 };
 
-function ButtonAppBar(props) {
-    const {classes} = props;
-    return (
-        <div className={classes.root}>
-            <AppBar position="static" style={primaryGreen} >
-                <Toolbar>
-                    <IconButton className={classes.menuButton} color="contrast" aria-label="Menu">
-                        <MenuIcon/>
-                    </IconButton>
-                    <Typography type="title" color="inherit" className={classes.flex}>
-                        LUBEER
-                    </Typography>
-                    <Button color="contrast">Login</Button>
-                </Toolbar>
-            </AppBar>
-        </div>
-    );
+const mapDispatchToProps = dispatch => {
+    return {
+        showSnackbar: (message) => dispatch(showNotification('Hello iSA :)')),
+        toggleSidebar: () => dispatch(toggleSidebar())
+    }
+}
+
+class ButtonAppBar extends Component {
+    render() {
+        return (
+            <div style={styles.root}>
+                <AppBar position="static" style={primaryGreen}>
+                    <Toolbar>
+                        <IconButton style={styles.menuButton} color="contrast" aria-label="Menu">
+                            <MenuIcon onClick={this.props.toggleSidebar}/>
+                        </IconButton>
+                        <Typography type="title" color="inherit" style={styles.flex}>
+                            LUBEER
+                        </Typography>
+                        <Button color="contrast">Login</Button>
+                    </Toolbar>
+                </AppBar>
+            </div>
+        );
+    }
 }
 
 ButtonAppBar.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ButtonAppBar);
+export default connect(null, mapDispatchToProps)(ButtonAppBar);
