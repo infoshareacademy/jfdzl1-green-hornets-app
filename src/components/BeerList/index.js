@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Grid from 'material-ui/Grid';
-import {database} from "../../firebase";
-import {ListItem, ListItemSecondaryAction, ListItemText} from 'material-ui/List';
+import List, { ListItem, ListItemText } from 'material-ui/List';
+import Divider from 'material-ui/Divider';
+
 import {init} from '../state';
 import {connect} from 'react-redux';
 
@@ -16,6 +17,12 @@ const mapDispatchToProps = dispatch => ({
   initBeers: () => dispatch(init())
 });
 
+const styles = {
+  link: {
+    textDecoration: 'none'
+  }
+}
+
 class BeerList extends Component {
 
   componentWillMount() {
@@ -26,18 +33,20 @@ class BeerList extends Component {
     return (
       <Grid item xs={12}>
         <h1>LISTA PIW</h1>
-        <div>
+        <List>
           {
             this.props.beers && this.props.beers
               .map(beer => (
-                  <div key={beer.id}>
-                    <p>Nazwa piwa: {beer.name}</p>
-                    <p>Produkcja: {beer.brewery}</p>
-                  </div>
+                <Link style={styles.link} to={`/beer/${beer.id}`} key={beer.id}>
+                  <ListItem button>
+                    <ListItemText primary={beer.name} secondary={beer.brewery} />
+                  </ListItem>
+                  <Divider />
+                </Link>
                 )
               )
           }
-        </div>
+        </List>
       </Grid>
     );
   }
