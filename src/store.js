@@ -4,8 +4,10 @@ import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 import filterReducer from './reducers/filter';
 import uiReducer from './UI/logic';
+import beersReducer from './components/state';
 
 const reducer = combineReducers({
+  beers: beersReducer,
   filter: filterReducer,
   ui: uiReducer,
   routing: routerReducer,

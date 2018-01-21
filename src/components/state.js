@@ -19,13 +19,13 @@ export const remove = beerId => dispatch => {
     database.ref(`/beerList/${beerId}`).remove()
 };
 
-export const populate = beer => ({
+export const populate = beers => ({
     type: POPULATE_BEERS,
-    beer
+    beers
 });
 
 export const init = () => dispatch => {
-    database.ref('/beerList')
+    database.ref('/beers')
         .on('value', (snapshot) => {
             const firebaseData = Object.entries(
                 snapshot.val() || {}
