@@ -2,16 +2,20 @@ import React, {Component} from 'react';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import { connect } from 'react-redux';
-
 import { showNotification} from '../../UI/logic';
 
 import './index.css';
+
+const mapStateToProps = state => ({
+    beerList: state.beer,
+    query: state.query
+});
 
 const mapDispatchToProps = dispatch => {
   return {
     showSnackbar: (message) => dispatch(showNotification('Hello iSA :)')),
   }
-}
+};
 
 class Dashboard extends Component {
   render() {
@@ -20,6 +24,7 @@ class Dashboard extends Component {
         <Paper>
           <h1>Dashboard</h1>
           <div>
+              {this.props.beerList}
             <button onClick={this.props.showSnackbar}>CLICK ME For notification!</button>
           </div>
         </Paper>
@@ -28,4 +33,4 @@ class Dashboard extends Component {
   }
 }
 
-export default connect(null, mapDispatchToProps)(Dashboard);
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

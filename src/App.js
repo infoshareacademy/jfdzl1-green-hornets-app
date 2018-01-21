@@ -7,6 +7,7 @@ import {withStyles} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import BeersList from './components/BeerList'
 
+
 import theme from './theme';
 import AppBar from './components/appbar';
 import Sidebar from './components/sidebar';
