@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import PropTypes from 'prop-types';
@@ -14,8 +14,6 @@ import Footer from './components/footer';
 import Dashboard from "./components/dashboard";
 import Notifications from './UI/Notifications';
 import { store, history } from './store';
-
-import './App.css';
 
 class App extends Component {
   render() {
