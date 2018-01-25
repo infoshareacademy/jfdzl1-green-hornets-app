@@ -2,10 +2,9 @@ import React, {Component} from 'react';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import { connect } from 'react-redux';
-
 import { showNotification} from '../../UI/logic';
-
 import './index.css';
+import Chart from "../Chart/index";
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -18,7 +17,7 @@ class Dashboard extends Component {
     return (
       <Grid item xs={12}>
         <Paper>
-          <h1>Dashboard</h1>
+          <Chart/>
           <div>
             <button onClick={this.props.showSnackbar}>CLICK ME For notification!</button>
           </div>
