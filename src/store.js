@@ -3,9 +3,11 @@ import { routerReducer, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
 import uiReducer from './components/UI/state';
+import beerReducer from './components/Beer/state';
 import beersReducer from './components/state';
 
 const reducer = combineReducers({
+  beer: beerReducer,
   beers: beersReducer,
   ui: uiReducer,
   routing: routerReducer,

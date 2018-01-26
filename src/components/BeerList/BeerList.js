@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Link from '../Link';
 import Grid from 'material-ui/Grid';
-import Paper from 'material-ui/Paper'
+import Paper from 'material-ui/Paper';
 import IconButton from 'material-ui/IconButton';
 import List, {ListItem, ListItemSecondaryAction, ListItemText} from 'material-ui/List';
 import Divider from 'material-ui/Divider';

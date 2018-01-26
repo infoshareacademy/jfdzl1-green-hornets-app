@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 
-import BeersList from './components/BeerList'
+import BeersList from './components/BeerList';
+import Beer from './components/Beer';
 import theme from './theme';
 import AppBar from './components/Appbar';
 import Sidebar from './components/Sidebar';
@@ -26,6 +27,7 @@ class App extends Component {
                 <AppBar/>
                 <Route exact path="/" component={Dashboard}/>
                 <Route path='/listOfBeers' component={BeersList}/>
+                <Route path='/beer/:beerId' component={Beer}/>
               </Grid>
             </div>
             <Sidebar/>
