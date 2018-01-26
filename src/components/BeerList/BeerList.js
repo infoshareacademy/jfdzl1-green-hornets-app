@@ -6,6 +6,7 @@ import IconButton from 'material-ui/IconButton';
 import List, {ListItem, ListItemSecondaryAction, ListItemText} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import StarIcon from 'material-ui-icons/Star';
+import Avatar from 'material-ui/Avatar';
 
 import {init} from '../state';
 import {connect} from 'react-redux';
@@ -45,8 +46,9 @@ class BeerList extends Component {
                 .map(beer => (
                     <div key={beer.id}>
                       <ListItem button>
+                        <Avatar alt={beer.name} src={beer.image_url} />
                         <Link to={`/beer/${beer.id}`}>
-                          <ListItemText primary={beer.Nazwa_piwa} secondary={beer.Styl}/>
+                          <ListItemText primary={beer.name} secondary={beer.style}/>
                         </Link>
                         <ListItemSecondaryAction>
                           <IconButton aria-label="Add to favorites">

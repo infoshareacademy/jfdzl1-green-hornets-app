@@ -13,6 +13,7 @@ import AppBar from './components/Appbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import Notifications from './components/UI/Notifications';
+import AddBeer from './components/AddBeer';
 import { store, history } from './store';
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
                 <Route exact path="/" component={Dashboard}/>
                 <Route path='/listOfBeers' component={BeersList}/>
                 <Route path='/beer/:beerId' component={Beer}/>
+                <Route path='/add' component={AddBeer}/>
               </Grid>
             </div>
             <Sidebar/>
