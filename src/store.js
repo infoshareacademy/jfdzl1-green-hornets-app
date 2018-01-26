@@ -2,13 +2,11 @@ import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory';
-import filterReducer from './reducers/filter';
-import uiReducer from './UI/logic';
+import uiReducer from './components/UI/state';
 import beersReducer from './components/state';
 
 const reducer = combineReducers({
   beers: beersReducer,
-  filter: filterReducer,
   ui: uiReducer,
   routing: routerReducer,
 });

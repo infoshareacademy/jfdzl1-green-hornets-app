@@ -5,15 +5,13 @@ import { ConnectedRouter } from 'react-router-redux';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
+
 import BeersList from './components/BeerList'
-
-
 import theme from './theme';
-import AppBar from './components/appbar';
-import Sidebar from './components/sidebar';
-import Footer from './components/footer';
-import Dashboard from "./components/dashboard";
-import Notifications from './UI/Notifications';
+import AppBar from './components/Appbar';
+import Sidebar from './components/Sidebar';
+import Dashboard from './components/Dashboard';
+import Notifications from './components/UI/Notifications';
 import { store, history } from './store';
 
 class App extends Component {
@@ -28,7 +26,6 @@ class App extends Component {
                 <AppBar/>
                 <Route exact path="/" component={Dashboard}/>
                 <Route path='/listOfBeers' component={BeersList}/>
-                <Footer/>
               </Grid>
             </div>
             <Sidebar/>

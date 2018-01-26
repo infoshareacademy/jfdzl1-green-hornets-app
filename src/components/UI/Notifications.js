@@ -5,7 +5,7 @@ import IconButton from 'material-ui/IconButton';
 import CloseIcon from 'material-ui-icons/Close';
 import { withStyles } from 'material-ui/styles';
 
-import { hideNotification } from './logic';
+import { hideNotification } from './state';
 
 const mapStateToProps = (state) => ({
   open: state.ui.notifications.open,
@@ -51,6 +51,5 @@ const Notifications = (props) => (
 export default withStyles(styles)(
   connect(
     mapStateToProps,
-    mapDispatchToProps)
-  (Notifications)
+    mapDispatchToProps)(Notifications)
 );

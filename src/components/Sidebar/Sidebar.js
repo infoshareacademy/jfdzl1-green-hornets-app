@@ -1,9 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 import Drawer from 'material-ui/Drawer';
 import List, {ListItem, ListItemIcon, ListItemText} from 'material-ui/List';
-
 import FaAngellist from 'react-icons/lib/fa/angellist';
 import FaDaschbord from 'react-icons/lib/fa/dashboard';
 import FaListOfBrewers from 'react-icons/lib/fa/fort-awesome';
@@ -11,7 +9,10 @@ import FaListOfBeers from 'react-icons/lib/fa/beer';
 import FaListOfCities from 'react-icons/lib/fa/bank';
 import FaAddBeer from 'react-icons/lib/fa/plus';
 import FaSearch from 'react-icons/lib/fa/search';
-import {toggleSidebar} from './../../UI/logic';
+import Divider from 'material-ui/Divider';
+
+import Link from '../Link'
+import {toggleSidebar} from './../UI/state';
 import './index.css';
 
 const mapStateToProps = state => ({
@@ -39,6 +40,7 @@ const Sidebar = (props) => (
             <ListItemText primary="Dashboard"/>
           </ListItem>
         </Link>
+        <Divider/>
         <Link to="/top">
           <ListItem button>
             <ListItemIcon>
@@ -47,6 +49,7 @@ const Sidebar = (props) => (
             <ListItemText primary="Top 10- najlepiej oceniane"/>
           </ListItem>
         </Link>
+        <Divider/>
         <Link to="/listOfBrewers">
           <ListItem button>
             <ListItemIcon>
@@ -55,6 +58,7 @@ const Sidebar = (props) => (
             <ListItemText primary="Lista browarów"/>
           </ListItem>
         </Link>
+        <Divider/>
         <Link to="/listOfBeers">
           <ListItem button>
             <ListItemIcon>
@@ -63,6 +67,7 @@ const Sidebar = (props) => (
             <ListItemText primary="Lista piw"/>
           </ListItem>
         </Link>
+        <Divider/>
         <Link to="/listOfCities">
           <ListItem button>
             <ListItemIcon>
@@ -71,6 +76,7 @@ const Sidebar = (props) => (
             <ListItemText primary="Lista miast"/>
           </ListItem>
         </Link>
+        <Divider/>
         <Link to="/advancedSearch">
           <ListItem button>
             <ListItemIcon>
@@ -79,6 +85,7 @@ const Sidebar = (props) => (
             <ListItemText primary="Wyszukiwanie zaawansowane"/>
           </ListItem>
         </Link>
+        <Divider/>
         <Link to="/add">
           <ListItem button>
             <ListItemIcon>

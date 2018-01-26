@@ -8,7 +8,7 @@ import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 
 import primaryGreen from '../palete'
-import {toggleSidebar} from '../../UI/logic';
+import {toggleSidebar} from '../UI/state';
 
 const styles = {
   root: {
