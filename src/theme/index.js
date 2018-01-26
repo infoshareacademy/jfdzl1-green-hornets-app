@@ -9,11 +9,14 @@ const styles = theme => ({
     alignItems: 'center'
   },
   fab: {
-    position: 'absolute',
+    margin: 0,
+    top: 'auto',
+    right: 20,
+    bottom: 20,
+    left: 'auto',
+    position: 'fixed',
     background: '#126131',
-    color: '#fff',
-    bottom: theme.spacing.unit * 2,
-    right: theme.spacing.unit * 2,
+    color: '#fff'
   }
 });
 
