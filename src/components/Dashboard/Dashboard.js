@@ -4,7 +4,7 @@ import Paper from 'material-ui/Paper';
 import {connect} from 'react-redux';
 import {showNotification} from '../UI/state';
 import Typography from 'material-ui/Typography';
-import Divider from 'material-ui/Divider';
+import banner from '../../images/banner.jpg'
 
 
 import './index.css';
@@ -29,7 +29,7 @@ class Dashboard extends Component {
             <Grid container justify="center">
                 <Grid item xs={8}>
                     <Paper style={styles.paper}>
-                        <img src={"<%= asset_url('../images/banner.jpg') %>"} />
+                        <img src={banner} width="100%" height="100%" />
                     </Paper>
                 </Grid>
                 <Grid container justify="center">

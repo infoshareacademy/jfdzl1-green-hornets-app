@@ -41,7 +41,7 @@ const Sidebar = (props) => (
           </ListItem>
         </Link>
         <Divider/>
-        <Link to="/top">
+        <Link to="/NotYet">
           <ListItem button>
             <ListItemIcon>
               <FaAngellist/>
@@ -68,7 +68,7 @@ const Sidebar = (props) => (
           </ListItem>
         </Link>
         <Divider/>
-        <Link to="/listOfCities">
+        <Link to="/NotYet">
           <ListItem button>
             <ListItemIcon>
               <FaListOfCities/>
@@ -77,7 +77,7 @@ const Sidebar = (props) => (
           </ListItem>
         </Link>
         <Divider/>
-        <Link to="/advancedSearch">
+        <Link to="/NotYet">
           <ListItem button>
             <ListItemIcon>
               <FaSearch/>
