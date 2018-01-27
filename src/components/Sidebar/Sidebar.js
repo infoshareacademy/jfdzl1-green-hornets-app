@@ -4,7 +4,7 @@ import Drawer from 'material-ui/Drawer';
 import List, {ListItem, ListItemIcon, ListItemText} from 'material-ui/List';
 import FaAngellist from 'react-icons/lib/fa/angellist';
 import FaDaschbord from 'react-icons/lib/fa/dashboard';
-import FaListOfBreweries from 'react-icons/lib/fa/fort-awesome';
+import FaListOfBrewers from 'react-icons/lib/fa/fort-awesome';
 import FaListOfBeers from 'react-icons/lib/fa/beer';
 import FaListOfCities from 'react-icons/lib/fa/bank';
 import FaAddBeer from 'react-icons/lib/fa/plus';
@@ -50,10 +50,10 @@ const Sidebar = (props) => (
           </ListItem>
         </Link>
         <Divider/>
-        <Link to="/listOfBreweries">
+        <Link to="/listOfBrewers">
           <ListItem button>
             <ListItemIcon>
-              <FaListOfBreweries/>
+              <FaListOfBrewers/>
             </ListItemIcon>
             <ListItemText primary="Lista browarów"/>
           </ListItem>

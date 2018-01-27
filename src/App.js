@@ -10,7 +10,6 @@ import AddIcon from 'material-ui-icons/Add';
 import {Link} from 'react-router-dom';
 
 import BeersList from './components/BeerList';
-import BreweriesList from './components/BreweriesList';
 import Beer from './components/Beer';
 import theme from './theme';
 import AppBar from './components/Appbar';
@@ -32,7 +31,6 @@ class App extends Component {
                 <AppBar/>
                 <Route exact path="/" component={Dashboard}/>
                 <Route path='/listOfBeers' component={BeersList}/>
-                <Route path='/listOfBreweries' component={BreweriesList}/>
                 <Route path='/beer/:beerId' component={Beer}/>
                 <Route path='/add' component={AddBeer}/>
               </Grid>
