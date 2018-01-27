@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 import TextField from 'material-ui/TextField';
 import Button from 'material-ui/Button';
 import Grid from 'material-ui/Grid';
@@ -25,7 +24,7 @@ const styles = {
   },
   row: {
     width: '100%',
-    padding: 10,
+    padding: 10
   }
 };
 
@@ -58,73 +57,42 @@ class AddBeer extends React.Component {
   }
 
   render() {
-    return (
-      <Grid item xs={12}>
-        <form onSubmit={this.handleSubmit}>
-          <Paper style={styles.paper}>
-            <div style={styles.row}>
-              <TextField
-                placeholder="Name"
-                name="name"
-                onChange={this.handleChange}
-                margin="normal"/>
-            </div>
-            <div style={styles.row}>
-              <TextField
-                placeholder="Brewery"
-                name="brewery"
-                onChange={this.handleChange}
-                margin="normal"/>
-            </div>
-            <div style={styles.row}>
-              <TextField
-                placeholder="Style"
-                name="style"
-                onChange={this.handleChange}
-                margin="normal"/>
-            </div>
-            <div style={styles.row}>
-              <TextField
-                placeholder="Description"
-                name="desc"
-                onChange={this.handleChange}
-                margin="normal"/>
-            </div>
-            <div style={styles.row}>
-              <TextField
-                placeholder="Extract"
-                name="extr"
-                onChange={this.handleChange}
-                multiline
-                rowsMax="4"
-                margin="normal"/>
-            </div>
-            <div style={styles.row}>
-              <TextField
-                placeholder="Image URL"
-                name="image_url"
-                onChange={this.handleChange}
-                margin="normal"/>
-            </div>
+    return (<Grid item xs={12}>
+      <form onSubmit={this.handleSubmit}>
+        <Paper style={styles.paper}>
+          <div style={styles.row}>
+            <TextField placeholder="Name" name="name" onChange={this.handleChange} margin="normal"/>
+          </div>
+          <div style={styles.row}>
+            <TextField placeholder="Brewery" name="brewery" onChange={this.handleChange} margin="normal"/>
+          </div>
+          <div style={styles.row}>
+            <TextField placeholder="Style" name="style" onChange={this.handleChange} margin="normal"/>
+          </div>
+          <div style={styles.row}>
+            <TextField placeholder="Description" name="desc" onChange={this.handleChange} multiline rowsMax="8" margin="normal"/>
+          </div>
+          <div style={styles.row}>
+            <TextField placeholder="Alcohol" name="alc" onChange={this.handleChange} margin="normal"/>
+          </div>
+          <div style={styles.row}>
+            <TextField placeholder="Extract" name="extr" onChange={this.handleChange} margin="normal"/>
+          </div>
+          <div style={styles.row}>
+            <TextField placeholder="Image URL" name="image_url" onChange={this.handleChange} margin="normal"/>
+          </div>
+          <Grid container justify="space-between">
             <div>
-              <Tooltip id="tooltip-icon" title="Add local to App">
-                <Button raised color="primary" input type="submit" value="Add">
-                  Add
-                </Button>
+              <Tooltip id="tooltip-icon" title="Add beer to App">
+                <Button raised color="primary" input="true" type="submit" value="Add">Add</Button>
               </Tooltip>
             </div>
-
-            <Button raised color="link">
-              <Link to="/listOfBeersy">Back to list</Link>
-            </Button>
-          </Paper>
-        </form>
-      </Grid>
-    );
+            <Button mini color="default" href="/listOfBeers">Back to list</Button>
+          </Grid>
+        </Paper>
+      </form>
+    </Grid>);
   }
 }
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(AddBeer);
+export default connect(null, mapDispatchToProps)(AddBeer);

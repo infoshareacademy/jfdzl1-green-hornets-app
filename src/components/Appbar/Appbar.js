@@ -31,13 +31,13 @@ const ButtonAppBar = (props) => (
   <div style={styles.root}>
     <AppBar position="static" style={primaryGreen}>
       <Toolbar>
-        <IconButton style={styles.menuButton} color="contrast" aria-label="Menu">
+        <IconButton style={styles.menuButton} color="primary" aria-label="Menu">
           <MenuIcon onClick={props.toggleSidebar}/>
         </IconButton>
         <Typography type="title" color="inherit" style={styles.flex}>
           LUBEER
         </Typography>
-        <Button color="contrast">Login</Button>
+        <Button color="primary">Login</Button>
       </Toolbar>
     </AppBar>
   </div>
