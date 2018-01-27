@@ -10,6 +10,8 @@ import MenuIcon from 'material-ui-icons/Menu';
 import primaryGreen from '../palete'
 import {toggleSidebar} from '../UI/state';
 
+import logo from '../../images/lubeer_logo.svg'
+
 const styles = {
   root: {
     width: '100%'
@@ -19,7 +21,8 @@ const styles = {
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20
+    marginRight: 20,
+    color: '#ffffff'
   }
 };
 
@@ -31,13 +34,12 @@ const ButtonAppBar = (props) => (
   <div style={styles.root}>
     <AppBar position="static" style={primaryGreen}>
       <Toolbar>
-        <IconButton style={styles.menuButton} color="primary" aria-label="Menu">
+        <IconButton style={styles.menuButton} color="disabled" aria-label="Menu">
           <MenuIcon onClick={props.toggleSidebar}/>
         </IconButton>
         <Typography type="title" color="inherit" style={styles.flex}>
-          LUBEER
+          <img src={logo} width="100" height="50" />
         </Typography>
-        <Button color="primary">Login</Button>
       </Toolbar>
     </AppBar>
   </div>
