@@ -37,8 +37,9 @@ class BreweriesList extends Component {
 
   render() {
     return (
-      <Grid item xs={12}>
-        <Paper style={styles.paper}>
+      <Grid container justify="center">
+          <Grid item xs={12} lg={6} >
+      <Paper style={styles.paper}>
           <h1>LISTA BROWARÓW</h1>
           <List>
             {
@@ -49,26 +50,27 @@ class BreweriesList extends Component {
                         <Avatar alt={beer.brewery} src={beer.image_url} />
                         <Link to={`/beer/${beer.id}`}>
                           <ListItemText primary={beer.brewery}/>
-                        </Link>
-                        <ListItemSecondaryAction>
-                          <IconButton aria-label="Add to favorites">
-                            <StarIcon />
-                          </IconButton>
-                        </ListItemSecondaryAction>
-                      </ListItem>
-                      <Divider />
-                    </div>
+                          </Link>
+                          <ListItemSecondaryAction>
+                            <IconButton aria-label="Add to favorites">
+                              <StarIcon />
+                            </IconButton>
+                          </ListItemSecondaryAction>
+                        </ListItem>
+                        <Divider />
+                      </div>
+                    )
                   )
-                )
-            }
-          </List>
-        </Paper>
-      </Grid>
-    );
+              }
+            </List>
+          </Paper>
+        </Grid>
+          </Grid>
+      );
+    }
   }
-}
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
 )(BreweriesList)
