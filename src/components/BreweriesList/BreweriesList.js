@@ -29,7 +29,7 @@ const mapDispatchToProps = dispatch => ({
   initBeers: () => dispatch(init())
 });
 
-class BeerList extends Component {
+class BreweriesList extends Component {
 
   componentWillMount() {
     this.props.initBeers();
@@ -71,4 +71,4 @@ class BeerList extends Component {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(BeerList)
+)(BreweriesList)
