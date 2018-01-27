@@ -37,7 +37,8 @@ class BeerList extends Component {
 
   render() {
     return (
-      <Grid item xs={12}>
+        <Grid container justify="center">
+            <Grid item xs={12} lg={6} >
         <Paper style={styles.paper}>
           <h1>LISTA PIW</h1>
           <List>
@@ -64,6 +65,7 @@ class BeerList extends Component {
           </List>
         </Paper>
       </Grid>
+        </Grid>
     );
   }
 }
