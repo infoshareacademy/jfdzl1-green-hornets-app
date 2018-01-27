@@ -50,7 +50,7 @@ const Sidebar = (props) => (
           </ListItem>
         </Link>
         <Divider/>
-        <Link to="/listOfBrewers">
+        <Link to="/listOfBreweries">
           <ListItem button>
             <ListItemIcon>
               <FaListOfBrewers/>
