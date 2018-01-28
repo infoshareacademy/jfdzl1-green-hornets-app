@@ -47,7 +47,7 @@ class AddBeer extends React.Component {
     handleSubmit = event => {
         if (this.state.name) {
             this.props.add(this.state);
-            this.props.showMessage('Beer has been added');
+            this.props.showMessage('Piwo zostało dodane');
             this.props.redirectTo('/listOfBeers');
         } else {
             this.props.showMessage('Please provide name');
@@ -94,10 +94,10 @@ class AddBeer extends React.Component {
                                        margin="normal"/>
                         </div>
                         <Grid container justify="space-between" style={styles.button}>
-                            <Button mini color="default" href="/listOfBeers">Back to list</Button>
+                            <Button mini color="default" href="/listOfBeers">Powrót do listy</Button>
                             <div>
                                 <Tooltip id="tooltip-icon" title="Add beer to App">
-                                    <Button raised color="primary" input="true" type="submit" value="Add">Add</Button>
+                                    <Button raised color="primary" input="true" type="submit" value="Add">Dodaj</Button>
                                 </Tooltip>
                             </div>
                         </Grid>
