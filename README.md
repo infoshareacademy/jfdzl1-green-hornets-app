@@ -2,6 +2,8 @@
 
 Demo: http://app.green-hornets.jfdzl1.is-academy.pl
 
+JFDZL1 projects: https://github.com/infoshareacademy/jfdzl1-projects
+
 ## Our other projects
 * Project website: [demo](http://green-hornets.jfdzl1.is-academy.pl), [repo](https://github.com/infoshareacademy/jfdzl1-green-hornets-www)
 * Game: [demo](http://green-hornets.jfdzl1.is-academy.pl/game), [repo](https://github.com/infoshareacademy/jfdzl1-green-hornets-game)
