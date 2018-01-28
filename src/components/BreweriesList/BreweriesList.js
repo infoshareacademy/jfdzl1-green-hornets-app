@@ -47,7 +47,7 @@ class BreweriesList extends Component {
                 .map(beer => (
                     <div key={beer.id}>
                       <ListItem button>
-                        <Avatar alt={beer.brewery} src={beer.image_url} size={50} />
+                        <Avatar alt={beer.brewery} src={beer.image_url} className="size_mini" />
                         <Link to={`/beer/${beer.id}`}>
                           <ListItemText primary={beer.brewery}/>
                           </Link>
