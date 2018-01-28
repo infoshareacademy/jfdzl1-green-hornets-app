@@ -29,7 +29,7 @@ const mapDispatchToProps = dispatch => ({
   initBeers: () => dispatch(init())
 });
 
-class BeerList extends Component {
+class BreweriesList extends Component {
 
   componentWillMount() {
     this.props.initBeers();
@@ -37,40 +37,40 @@ class BeerList extends Component {
 
   render() {
     return (
-        <Grid container justify="center">
-            <Grid item xs={12} lg={6} >
-        <Paper style={styles.paper}>
-          <h1>LISTA PIW</h1>
+      <Grid container justify="center">
+          <Grid item xs={12} lg={6} >
+      <Paper style={styles.paper}>
+          <h1>LISTA BROWARÓW</h1>
           <List>
             {
               this.props.beers && this.props.beers
                 .map(beer => (
                     <div key={beer.id}>
                       <ListItem button>
-                        <Avatar alt={beer.name} src={beer.image_url} />
+                        <Avatar alt={beer.brewery} src={beer.image_url} />
                         <Link to={`/beer/${beer.id}`}>
-                          <ListItemText primary={beer.name} secondary={beer.style}/>
-                        </Link>
-                        <ListItemSecondaryAction>
-                          <IconButton aria-label="Add to favorites">
-                            <StarIcon />
-                          </IconButton>
-                        </ListItemSecondaryAction>
-                      </ListItem>
-                      <Divider />
-                    </div>
+                          <ListItemText primary={beer.brewery}/>
+                          </Link>
+                          <ListItemSecondaryAction>
+                            <IconButton aria-label="Add to favorites">
+                              <StarIcon />
+                            </IconButton>
+                          </ListItemSecondaryAction>
+                        </ListItem>
+                        <Divider />
+                      </div>
+                    )
                   )
-                )
-            }
-          </List>
-        </Paper>
-      </Grid>
+              }
+            </List>
+          </Paper>
         </Grid>
-    );
+          </Grid>
+      );
+    }
   }
-}
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(BeerList)
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(BreweriesList)
