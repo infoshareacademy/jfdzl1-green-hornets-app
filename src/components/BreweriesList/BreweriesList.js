@@ -52,7 +52,7 @@ class BreweriesList extends Component {
                           <ListItemText primary={beer.brewery}/>
                           </Link>
                           <ListItemSecondaryAction>
-                            <IconButton aria-label="Add to favorites">
+                            <IconButton aria-label="Dodaj do ulubionych">
                               <StarIcon />
                             </IconButton>
                           </ListItemSecondaryAction>
