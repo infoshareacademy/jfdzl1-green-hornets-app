@@ -47,7 +47,7 @@ class BeerList extends Component {
                 .map(beer => (
                     <div key={beer.id}>
                       <ListItem button>
-                        <Avatar alt={beer.name} src={beer.image_url} />
+                        <Avatar alt={beer.name} src={beer.image_url} className="mini_size" />
                         <Link to={`/beer/${beer.id}`}>
                           <ListItemText primary={beer.name} secondary={beer.style}/>
                         </Link>
