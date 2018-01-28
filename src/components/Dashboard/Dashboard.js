@@ -80,7 +80,7 @@ class Dashboard extends Component {
                     </Grid>
                     <Grid item xs={12} sm={6} md={6} lg={6}>
                         <Paper style={styles.stats}>
-                            <Typography type="headline" component="h3"style={styles.typo}> Urzytkownicy </Typography>
+                            <Typography type="headline" component="h3"style={styles.typo}> Użytkownicy </Typography>
                             <PieChart width={300} height={242}>
                                 <Pie data={dataCustomers} dataKey="uv" nameKey="name" cx="50%" cy="50%" outerRadius={30}
                                      fill="#0B622F"/>
