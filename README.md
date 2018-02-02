@@ -1,5 +1,11 @@
 # JFDZL1 Green Hornets - App
 
+Run:
+```sh
+npm install
+npm start
+```
+
 Demo: http://app.green-hornets.jfdzl1.is-academy.pl
 
 JFDZL1 projects: https://github.com/infoshareacademy/jfdzl1-projects
